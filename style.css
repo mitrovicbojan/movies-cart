@@ -1,0 +1,22 @@
+:root {
+  --primary-color: #232423;
+  --light-color: #0080ee;
+  --info-color: #99a3aa;
+  --accent1-color: #29bd4b;
+  --success-color: #13a718;
+  --accent3-color: #627681;
+  --sec-color: #4f5960;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--light-color);
+  background-size: cover;
+  font-family: sans-serif;
+  padding: 50px;
+}
