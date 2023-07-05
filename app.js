@@ -7,5 +7,8 @@ function addToCart(elements) {
   let cartItems = document.querySelector(".cart-items");
   price = Number(price.substring(1));
   console.log(price);
-  cartItems.innerHTML = `Movie: ${title}, Price:${price}`;
+  totalPrice += price;
+  cartItems.innerHTML += `Movie: ${title}, Price:${price} <button>Remove</button>`;
+  document.querySelector(".total").innerText = `Total price: $${totalPrice}`;
+  elements.setAttribute("disabled", "true");
 }
