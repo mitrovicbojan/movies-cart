@@ -21,3 +21,16 @@ body {
   font-family: sans-serif;
   padding: 50px;
 }
+.container {
+  display: flex;
+}
+
+.items {
+  width: 350px;
+  margin: 100px;
+}
+
+.single-items {
+  display: flex;
+  margin-bottom: 25px;
+}
