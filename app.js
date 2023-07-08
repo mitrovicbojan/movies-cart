@@ -8,11 +8,16 @@ function addToCart(elements) {
   price = Number(price.substring(1));
 
   totalPrice += price;
-  cartItems.innerHTML += `Movie: ${title}, Price:${price} <button class="remove-item" onclick="removeFromCart(this)">Remove</button> <br>`;
+  cartItems.innerHTML += `<div class="cart-item">Movie: ${title}, <p>Price:<span>${price}</span></p> <button class="remove-item" onclick="removeFromCart(this)">Remove</button></div>`;
   document.querySelector(".total").innerText = `Total price: $${totalPrice}`;
   elements.setAttribute("disabled", "true");
 }
 
 function removeFromCart(elements) {
-  console.log("remove");
+  let mainItem = elements.closest(".cart-item");
+  let price = mainItem.querySelector("p span").innerText;
+  console.log(price);
+  totalPrice -= parseInt(price);
+  mainItem.remove();
+  document.querySelector(".total").innerText = `Total price: ${totalPrice}`;
 }
